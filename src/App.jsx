@@ -5,6 +5,7 @@ import Projects from './sections/Projects'
 import WorkProjects from './sections/WorkProjects'
 import Skills from './sections/Skills'
 import Certifications from './sections/Certifications'
+import AskMe from './sections/AskMe'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 
@@ -18,6 +19,7 @@ function App() {
       <WorkProjects />
       <Skills />
       <Certifications />
+      <AskMe />
       <Contact />
       <Footer />
     </div>

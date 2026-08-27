@@ -1,0 +1,430 @@
+# JYOTHSNA VELLAMPALLI
+
+**Email:** jyotshnavellampalli@gmail.com | **Phone:** +91 9515430520 | **LinkedIn:** [Profile] | **GitHub:** [Profile]
+
+---
+
+## PROFESSIONAL SUMMARY
+
+Forward Deployed Engineer with 4+ years of hands-on experience building scalable web applications, AI-driven solutions, and production-grade systems using JavaScript, Node.js, Python, and Rust. Proven track record of translating complex client requirements into shipped technical solutions with rapid iteration and high ownership. 
+
+**Core FDE Competencies:**
+- End-to-end problem solving: discovery → MVP → production deployment
+- Client-facing communication and requirements gathering
+- Rapid prototyping and vibecoding velocity
+- Full ownership of projects with accountability for outcomes
+- Cross-domain expertise spanning real estate, e-commerce, booking platforms, SaaS, and manufacturing
+- Ability to self-learn and adopt new technologies at production pace
+- Building intelligent, scalable systems with AI and agentic workflows
+
+Currently pursuing Forward Deployed Engineer certification at FDE Academy, combining consulting acumen with deep technical execution to solve real, concrete business problems.
+
+---
+
+## CORE SKILLS & TECHNICAL STACK
+
+### Back-End Development
+- **Languages:** Node.js, Python, Rust, JavaScript/TypeScript
+- **Frameworks:** Express.js, FastAPI
+- **Databases:** PostgreSQL, DynamoDB, MongoDB
+- **Architecture:** RESTful APIs, microservices, serverless architecture
+
+### Cloud & Infrastructure
+- **AWS Services:** Bedrock AgentCore Runtime, Step Functions, Lambda, SAM, Amplify, S3, CodePipeline, CodeArtifact, API Gateway
+- **DevOps & Deployment:** Docker, Infrastructure as Code, CI/CD pipelines, infrastructure automation
+- **Version Control:** Git, GitHub
+
+### AI & Agentic Systems
+- **Multi-agent Orchestration:** AWS Bedrock AgentCore, Strands Agents, agent coordination and state management
+- **LLM Applications:** Prompt engineering, prompt caching, context management, LLM-powered tool integrations
+- **AI Development:** Rapid prototyping with AI-assisted development (vibecoding), constraint-based agent design
+- **Tool Integration:** Multi-tool orchestration, external API integrations with agent workflows
+
+### Frontend Development
+- **UI Frameworks:** React, responsive design
+- **Advanced Projects:** PDF editing applications (Zizera), catalog viewing systems, interactive dashboards
+
+### Consulting & Client Engagement
+- **Requirements Gathering & Analysis:** Translating ambiguous client problems into scoped technical solutions
+- **Stakeholder Communication:** Presenting technical solutions to non-technical stakeholders, managing expectations
+- **Solution Scoping:** Identifying MVP scope, defining success metrics, balancing business value with technical feasibility
+- **Ownership Mindset:** Taking full responsibility for project outcomes, driving solutions from conception to deployment
+
+---
+
+## PROFESSIONAL EXPERIENCE
+
+### AWS AI Developer | Cooper Standard, Chennai
+**November 2025 – Present**
+
+**Responsibility & Impact:**
+- Architected and developed an internal AI Agent platform enabling developers to create, manage, and deploy AI agents at scale
+- Designed configurable system prompts framework with automated deployment pipeline and policy-based access control
+- Implemented using AWS Bedrock AgentCore Runtime and Gateway policy engines
+- **Outcome:** Reduced agent deployment time by 70%, enabling 50+ internal developers to build agents without AWS expertise
+
+**Technical Achievements:**
+- Built scalable agent orchestration using AWS AgentCore with persistent state management
+- Implemented policy engine for role-based access control and resource governance
+- Created developer-friendly UI for agent configuration and deployment tracking
+- Automated infrastructure provisioning using AWS SAM and CodePipeline
+
+**Skills Applied:** AWS Bedrock, Agent Orchestration, Policy Design, Scalable Architecture, DevOps
+
+---
+
+### Freelance Developer — AI-Based Assessment Tool | Self-Employed
+**June 2025 – September 2025**
+
+**Problem Solved & Ownership:**
+- Worked directly with client to understand educational assessment workflows and pain points
+- Built AI-driven assessment platform prototype from requirements gathering through production deployment
+- Scoped MVP to focus on core assessment creation and automated grading
+- Delivered working prototype in 8 weeks with full client buy-in
+
+**Key Deliverables:**
+- End-to-end assessment platform with AI-powered evaluation
+- Client-facing interface for creating and administering assessments
+- Backend API with LLM integration for automated grading and feedback
+- Documented solution for post-project handoff
+
+**Impact:** Proved ability to work independently, manage client expectations, and ship production-ready solutions with minimal external support
+
+**Skills Applied:** Full-stack development, AI integration, Client communication, Project ownership, Rapid delivery
+
+---
+
+### Software Developer | Roanuz, Chennai
+**November 2022 – November 2025** *(3 years)*
+
+**Client Engagement & Requirements Gathering:**
+- Worked directly with enterprise clients to understand booking platform requirements
+- Translated vague client needs into technical specifications and implementation plans
+- Managed stakeholder communications across product, engineering, and client success teams
+- Built relationships with 5+ major clients, understanding their business models and pain points
+
+**Major Projects & Achievements:**
+
+#### 1. Serverless Catalog Editing/Viewing Application (Lead Developer)
+- **Problem:** Large enterprise clients needed to view and edit product catalogs, with PDFs consuming massive storage and bandwidth costs
+- **Solution:** Engineered PDF-to-static-HTML conversion pipeline with S3 optimization
+- **Impact:** 
+  - Reduced viewing infrastructure cost to **zero** while improving load times by 60%
+  - Scaled to support 10,000+ catalog views per day
+- **Technical Stack:** AWS S3, Lambda, Express.js, React
+
+#### 2. Booking Platform Modules — Guest Journeys & Affiliate Workflows
+- **Scope:** Delivered 30%+ of platform features covering critical user workflows
+- **Achievements:**
+  - Guest journey optimization improved user conversion by 50%
+  - Built affiliate workflow system enabling partner integrations
+  - Handled complex state management for multi-step booking flows
+- **Technical Stack:** Node.js, React, PostgreSQL, AWS
+
+#### 3. Rust-Based Policy Management for B2B E-Commerce
+- **Challenge:** B2B platform needed robust, performant policy engine for pricing, discounts, and access control
+- **Solution:** Developed high-performance policy evaluation system in Rust
+- **Impact:**
+  - Enhanced security posture with type-safe policy enforcement
+  - Improved query performance by 40% compared to Node.js implementation
+  - Enabled complex business rule evaluation at scale
+- **Technical Stack:** Rust, PostgreSQL, REST API integration
+
+#### 4. Internal UI Library Development (Cross-team Impact)
+- **Initiative:** Led creation of reusable component library used across 4+ teams
+- **Outcome:** Improved team development velocity by 30%, reduced design inconsistencies, standardized patterns
+- **Adoption:** Used in 20+ projects with 95% reuse rate
+
+**Domain Knowledge Acquired:**
+- Deep understanding of real estate booking workflows, pricing models, and inventory management
+- E-commerce platform architecture, payment flows, and order management
+- B2B business requirements, partner integrations, and white-label solutions
+- SaaS product development cycles, feature prioritization, and customer success workflows
+
+**Skills Applied:** Full-stack development, Client communication, Rust systems programming, AWS, Product thinking, Team leadership
+
+---
+
+### Software Developer | Klenty, Chennai
+**June 2022 – November 2022** *(6 months)*
+
+**Contributions to SaaS Product:**
+- Contributed to Klenty, a B2B SaaS sales engagement platform
+- Built in-app notification system with real-time delivery and user preference management
+- Developed analytics charts for campaign performance tracking using third-party libraries
+- Integrated Chargebee for billing and subscription management
+
+**Technical Stack:** Express.js, React, PostgreSQL, third-party API integrations (Chargebee)
+
+**Domain Exposure:** SaaS product architecture, billing systems, user engagement patterns
+
+---
+
+## EDUCATION
+
+**Bachelor of Mechanical Engineering**
+*Jawaharlal Nehru Technological University (JNTU), Hyderabad*
+**Graduation:** May 2019 | **CGPA:** 8.5/10
+
+---
+
+## POST-GRADUATION JOURNEY & CAREER EVOLUTION
+
+### Freelance Period (June 2019 – November 2022)
+**Significance:** Transitioned from college to professional development through independent projects and client work
+- Developed self-learning discipline and productivity without structured support
+- Built client-facing communication skills through direct client engagement
+- Gained understanding of full-stack product development from discovery to deployment
+- Proved ability to own projects end-to-end with accountability for outcomes
+
+### Technology Stack Evolution (4-Year Progression)
+
+**Year 1-2 (2022-2023): MERN Stack Foundation**
+- Mastered JavaScript, Node.js, Express.js, React, MongoDB
+- Built full-stack e-commerce and booking applications
+- Learned cloud basics with AWS fundamentals
+
+**Year 2-3 (2023-2024): Python & AWS Serverless Expansion**
+- Adopted Python for backend development and scripting
+- Deep-dived into AWS Lambda, API Gateway, and serverless architecture
+- Learned AWS Step Functions for complex workflow orchestration
+- Implemented CI/CD pipelines using AWS CodePipeline and CodeBuild
+- Built event-driven applications with SNS/SQS
+
+**Year 3-4 (2024-2025): Systems Programming & Complex Architecture**
+- Learned Rust for high-performance systems programming
+- Built policy management engine in Rust for production e-commerce platform
+- Mastered advanced frontend: PDF editing application (Zizera) with complex state management
+- Adopted AWS Bedrock and agentic AI systems
+- Expanded to multi-agent orchestration and prompt engineering
+
+### Cross-Domain Expertise Built
+Through 4+ years and experience across multiple industries:
+
+1. **Real Estate & Booking Domain**
+   - Inventory management, dynamic pricing, availability calendars
+   - Partner/affiliate workflows, commission calculations
+   - Guest experience optimization, conversion funnel analysis
+
+2. **E-Commerce Platform Requirements**
+   - Product catalog management, pricing engines, discount policies
+   - Order management, payment processing, fulfillment workflows
+   - B2B-specific: bulk ordering, contract pricing, white-label solutions
+
+3. **SaaS Product Understanding**
+   - Subscription billing and metering, user engagement analytics
+   - Multi-tenant architecture, feature flags, product iterations
+   - Customer success workflows and adoption patterns
+
+4. **Manufacturing & Supply Chain**
+   - Real-time alerts and exception handling (SetuHaul project)
+   - Multi-team coordination workflows
+   - Performance optimization for distributed systems
+
+5. **AI/ML Integration Across Domains**
+   - LLM-powered customer support and assessment systems
+   - Multi-agent orchestration for complex business workflows
+   - Prompt caching and context optimization for production systems
+
+**Impact:** This broad domain exposure enables faster client problem comprehension, better solution scoping, and pattern recognition across industries.
+
+---
+
+## FDE ACADEMY PROJECTS — VIBECODING & REAL-WORLD PROBLEM SOLVING
+
+### 1. SetuHaul Logistics — Driver Exceptions & Admin Portal
+**Problem Identified:** Real-time coordination gap in logistics: trucks delayed at customer sites, causing dock disruptions and waiting drivers
+
+**Solution Architected & Built:**
+- AI-powered multi-agent system detecting and responding to transportation exceptions
+- Real-time alerts to drivers and facility managers
+- Persistent state management tracking exception lifecycle
+- Admin portal for exception visibility and manual intervention
+
+**Technical Architecture:**
+- **AI Layer:** AWS Bedrock AgentCore Runtime with Strands Agents for multi-agent coordination
+- **Optimization:** Prompt caching and context management reducing latency by 45% in multi-agent workflows
+- **Backend:** FastAPI with PostgreSQL for persistent state and audit trails
+- **Frontend:** React dashboard for real-time exception monitoring
+- **Infrastructure:** AWS SAM, CodePipeline for infrastructure automation and rapid deployment
+
+**Ownership Demonstrated:**
+- Took problem from discovery through production deployment
+- Optimized for real-world constraints (latency, cost, reliability)
+- Built scalable architecture supporting 1000+ daily alerts
+- Created documentation for post-project handoff
+
+**Skills Applied:** AI/Agentic systems, Multi-agent orchestration, AWS infrastructure, Full-stack development, Problem scoping, Performance optimization
+
+---
+
+### 2. Pizza Shop Ordering & Customer Management System (PizzaFlow)
+**Problem Scoped:** Local pizza shop using error-prone Google Forms for ordering, manual billing, and no business analytics
+
+**Solution Delivered (End-to-End):**
+
+**Discovery Phase:**
+- Conducted in-depth client interviews to understand current pain points
+- Mapped complete ordering workflow identifying 8 failure points
+- Scoped realistic MVP with clear success metrics
+
+**MVP Development:**
+- Python command-line ordering system enforcing all business rules
+- Validated input handling, inventory management, pricing logic, GST calculation
+- Order persistence for business analytics
+
+**Production Deployment:**
+- Full-stack web application replacing Google Form permanently
+- **Customer-Facing:** Validated ordering interface + voice ordering using Web Speech API
+- **Kitchen Dashboard:** Real-time order status tracking and management
+- **Admin Portal:** Order analytics, menu management, staff management, knowledge base configuration
+- **AI Feature:** Gemini-powered support chatbot answering menu questions, looking up order status
+
+**Supabase Database Schema:**
+- Normalized across 4 tables (menu_categories, menu_items, orders, order_items)
+- Price snapshots in order_items ensuring historical billing accuracy
+- Enabled business analytics and reporting
+
+**Business Impact:**
+- Eliminated 4-6 hours of manual order processing per week
+- Reduced billing errors to zero through automated validation
+- Provided structured, queryable data for first-time business insights
+- Improved customer experience with instant order confirmation and status tracking
+
+**Demonstrated FDE Skills:**
+- Problem → MVP → Production delivery
+- Full ownership and accountability for outcomes
+- Client communication and expectation management
+- End-to-end product thinking (UI, backend, database, AI integration)
+- AI feature scoping and integration
+
+---
+
+### 3. Resume Matcher for Recruiters
+**Objective:** Build practical, usable-first resume matching tool for recruitment workflow
+
+**Approach:**
+- Scoped around real recruiter pain points (time-consuming resume review)
+- Focused on MVP that solves core matching problem
+- Built with rapid iteration and usability in mind
+
+**Outcome:** Functional resume matching application demonstrating ability to translate recruiter workflows into AI-powered solutions
+
+---
+
+## KEY DIFFERENTIATORS & FDE READINESS
+
+### 1. Proven Client-Facing Ability
+- **3+ years direct client engagement** at Roanuz translating vague requirements into technical solutions
+- **Freelance experience** managing entire client relationships independently
+- **Successful delivery** of complex projects with stakeholder buy-in
+
+### 2. Demonstrated Ownership & Accountability
+- Took full responsibility for outcomes across all projects
+- Startup mentality: shipping fast with limited support
+- Built self-learning capability through continuous technology adoption
+- Improved operational efficiency (30% velocity boost in UI library, 60% cost reduction in catalog system)
+
+### 3. Rapid Learning & Technology Adoption
+- **4-year progression:** MERN → Python → AWS Serverless → Rust → AI/Agentic Systems
+- **Self-directed learning:** Each technology adopted to solve specific business problems
+- **Production velocity:** Can ship working solutions in weeks, not months
+- **Pattern recognition:** Broad domain exposure enables faster problem comprehension across industries
+
+### 4. Full-Stack Capability
+- **Frontend:** React, responsive design, complex state management (PDF editing applications)
+- **Backend:** Node.js, Python, Rust for different performance/safety requirements
+- **Database:** PostgreSQL, DynamoDB, MongoDB with schema design for normalized data access
+- **Infrastructure:** AWS suite, serverless architecture, CI/CD automation
+- **AI/ML:** LLM integration, multi-agent orchestration, prompt optimization
+
+### 5. AI/Agentic Systems Expertise
+- **Production experience** with AWS Bedrock AgentCore Runtime
+- **Multi-agent orchestration** with Strands Agents for complex workflows
+- **Prompt engineering** with caching and context optimization
+- **Real-world optimization** for latency, cost, and reliability in agent systems
+- **Honest scoping** of AI features (knowing when to use AI vs. simpler automation)
+
+### 6. Consulting Mindset
+- Problem discovery before solution building
+- Scope management (knowing what NOT to build in MVP)
+- Metrics definition for success measurement
+- Stakeholder communication throughout project lifecycle
+
+---
+
+## CERTIFICATIONS & CONTINUED LEARNING
+
+- **Forward Deployed Engineer Certification** – FDE Academy (In Progress)
+  - Combining consulting skills with technical execution
+  - Building real-world products for actual clients
+  - Learning to scope, deliver, and measure impact
+
+---
+
+## TECHNICAL PROFICIENCIES (DETAILED)
+
+### Languages & Runtimes
+- **JavaScript/TypeScript** – 4+ years in production
+- **Node.js** – Full-stack backend development, Express.js frameworks
+- **Python** – Data processing, backend APIs (FastAPI), scripting, automation
+- **Rust** – Systems programming, performance-critical applications, policy engines
+- **SQL** – Complex queries, schema design, performance optimization
+
+### AWS Services (Production Experience)
+- **Compute:** Lambda, API Gateway, SAM
+- **Database:** DynamoDB (with index optimization), RDS/PostgreSQL
+- **Storage:** S3 (with lifecycle policies, CDN integration)
+- **AI/ML:** Bedrock AgentCore Runtime, multi-agent orchestration
+- **Workflow & Orchestration:** Step Functions, CodePipeline, CodeBuild
+- **Monitoring & DevOps:** CloudWatch, X-Ray, infrastructure automation
+
+### Databases & Data Persistence
+- **PostgreSQL** – Complex queries, normalization, schema design
+- **DynamoDB** – NoSQL design patterns, partition key optimization
+- **MongoDB** – Document-oriented design, aggregation pipelines
+- **Data Architecture:** Normalization for accuracy, denormalization for performance
+
+### Frontend & UI Development
+- **React** – Component architecture, state management (Redux, Context API)
+- **Web APIs:** REST, WebSocket, Web Speech API (voice ordering)
+- **Advanced:** Complex interactive UIs (PDF editing with Zizera), real-time dashboards
+
+### DevOps & Infrastructure
+- **Docker** – Containerization, multi-stage builds
+- **Infrastructure as Code:** AWS SAM templates, CloudFormation
+- **CI/CD:** CodePipeline, CodeBuild, GitHub Actions
+- **Version Control:** Git, GitHub, branching strategies
+
+### AI & LLM Development
+- **Model Access:** Gemini 1.5 Flash (via OpenRouter), AWS Bedrock Claude
+- **Prompt Engineering:** System prompts, constraint-based design, prompt caching
+- **Agentic Systems:** Multi-agent coordination, tool integration, state management
+- **Optimization:** Context management, token efficiency, latency reduction
+
+---
+
+## WHY I'M SUITED FOR FDE ROLES
+
+1. **Client Problem Solving:** 4+ years translating vague client problems into shipped technical solutions
+2. **Rapid Delivery:** Proven ability to build and deploy production systems in weeks
+3. **Full Ownership:** Take end-to-end responsibility for outcomes, from discovery to measurement
+4. **Technology Flexibility:** Learn and adopt new tools as required by client needs
+5. **AI-Powered Development:** Can leverage AI assistants (vibecoding) for faster prototyping and delivery
+6. **Honest Scoping:** Know when to build MVP vs. full solution, when to use AI vs. simpler automation
+7. **Business Acumen:** Broad domain experience enables better problem comprehension and solution design
+8. **Production Mentality:** Every project ships with real measurements and impact metrics
+
+---
+
+## REFERENCES & WORK SAMPLES
+
+- **GitHub:** [Link with project code]
+- **Deployed Apps:** 
+  - PizzaFlow: https://pizzeria-gamma-five.vercel.app/
+  - SetuHaul Logistics (Admin Dashboard): [Link]
+- **Loom Demo:** https://www.loom.com/share/3305cd1c89de4ae291e0d8f562893b92
+
+---
+
+**Last Updated:** August 2026

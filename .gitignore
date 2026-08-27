@@ -21,3 +21,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables (contains API keys)
+.env
+
+# Large video files — host externally instead
+public/videos/*.mp4

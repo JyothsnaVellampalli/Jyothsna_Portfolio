@@ -5,10 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:netlify": "netlify dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "ingest": "node --env-file=.env scripts/ingest.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@pinecone-database/pinecone": "^4.0.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.451.0",
     "react": "^18.3.1",
