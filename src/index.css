@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   Theme tokens (HSL). Dark space theme with purple accents.
+   ========================================================= */
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 206 35% 72%;
+    --card: 290 35% 28%;
+    --card-foreground: 206 35% 72%;
+    --popover: 290 35% 28%;
+    --popover-foreground: 206 35% 72%;
+    --primary: 239 25% 56%;
+    --primary-foreground: 330 28% 13%;
+    --secondary: 274 30% 34%;
+    --secondary-foreground: 206 35% 72%;
+    --muted: 290 35% 28%;
+    --muted-foreground: 206 25% 60%;
+    --accent: 206 35% 72%;
+    --accent-foreground: 330 28% 13%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 274 30% 34%;
+    --input: 290 35% 28%;
+    --ring: 239 25% 56%;
+    --radius: 0.5rem;
+  }
+
+  /* Use default system cursors */
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  }
+}
+
+/* =========================================================
+   Floating / glowing text animations (hero headings)
+   ========================================================= */
+.floating-text {
+  animation: float 6s ease-in-out infinite;
+}
+.floating-text-delayed {
+  animation: float-delayed 8s ease-in-out infinite;
+}
+.glowing-text {
+  animation: glow 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   Space background: radial gradient + starfield
+   ========================================================= */
+.space-background {
+  background: radial-gradient(ellipse at bottom, #1b1b32, #0d0d0d);
+  position: relative;
+}
+.space-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 40% 70%, white, transparent),
+    radial-gradient(1px 1px at 90% 40%, white, transparent),
+    radial-gradient(1px 1px at 50% 50%, white, transparent),
+    radial-gradient(2px 2px at 80% 10%, white, transparent);
+  background-repeat: repeat;
+  background-size: 550px 400px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* =========================================================
+   Custom glowing star cursor + trailing particles
+   ========================================================= */
+.cursor-star {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.2s ease;
+}
+.cursor-star::before {
+  content: '\2726'; /* ✦ */
+  position: absolute;
+  font-size: 20px;
+  color: #9fbbd1;
+  text-shadow: 0 0 10px rgba(152, 193, 217, 0.8),
+    0 0 20px rgba(152, 193, 217, 0.4), 0 0 30px rgba(152, 193, 217, 0.2);
+  animation: cursor-glow 2s ease-in-out infinite alternate;
+  transform: translate(-50%, -50%);
+}
+.cursor-star.hover::before {
+  color: #7374ab;
+  font-size: 24px;
+  text-shadow: 0 0 15px rgba(105, 105, 179, 0.9),
+    0 0 25px rgba(105, 105, 179, 0.5), 0 0 35px rgba(105, 105, 179, 0.3);
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(
+    circle,
+    rgba(152, 193, 217, 0.8) 0%,
+    rgba(152, 193, 217, 0.4) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  animation: trail-fade 0.6s ease-out forwards;
+}
+
+@keyframes cursor-glow {
+  0% {
+    text-shadow: 0 0 10px rgba(152, 193, 217, 0.6),
+      0 0 20px rgba(152, 193, 217, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(152, 193, 217, 1),
+      0 0 25px rgba(152, 193, 217, 0.6), 0 0 35px rgba(152, 193, 217, 0.3);
+  }
+}
+
+@keyframes trail-fade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   3D particle orb (Contact section)
+   ========================================================= */
+.particle-orb-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.particle-orb-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: orb-rotate 14s infinite linear;
+}
+.particle-3d {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  opacity: 0;
+  background: #9fbbd1;
+  box-shadow: 0 0 6px #9fbbd1, 0 0 12px #9fbbd1;
+  animation: particle-orbit-3d 14s infinite ease-in-out;
+}
+.particle-3d:nth-child(2n) {
+  background: #7374ab;
+  box-shadow: 0 0 6px #7374ab, 0 0 12px #7374ab;
+}
+.particle-3d:nth-child(3n) {
+  background: #5a3d71;
+  box-shadow: 0 0 6px #5a3d71, 0 0 12px #5a3d71;
+}
+.particle-3d:nth-child(4n) {
+  background: #582e60;
+  box-shadow: 0 0 6px #582e60, 0 0 12px #582e60;
+}
+.particle-3d:nth-child(5n) {
+  width: 2.5px;
+  height: 2.5px;
+  background: #c1d3e1;
+  box-shadow: 0 0 5px #c1d3e1, 0 0 10px #c1d3e1;
+}
+
+@keyframes orb-rotate {
+  0% {
+    transform: rotateY(0) rotateX(0);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes particle-orbit-3d {
+  0% {
+    opacity: 0;
+    transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+      translate(0) rotate(var(--rotate-z));
+  }
+  20% {
+    opacity: 1;
+    transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+      translate(140px) rotate(var(--rotate-z));
+  }
+  30% {
+    opacity: 1;
+    transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+      translate(180px) rotate(var(--rotate-z));
+  }
+  80% {
+    opacity: 1;
+    transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+      translate(180px) rotate(var(--rotate-z));
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+      translate(540px) rotate(var(--rotate-z));
+  }
+}
+
+@media (max-width: 768px) {
+  .particle-3d {
+    width: 2.5px;
+    height: 2.5px;
+  }
+  .particle-3d:nth-child(5n) {
+    width: 2px;
+    height: 2px;
+  }
+  @keyframes particle-orbit-3d {
+    0% {
+      opacity: 0;
+      transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+        translate(0) rotate(var(--rotate-z));
+    }
+    20% {
+      opacity: 1;
+      transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+        translate(100px) rotate(var(--rotate-z));
+    }
+    30% {
+      opacity: 1;
+      transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+        translate(120px) rotate(var(--rotate-z));
+    }
+    80% {
+      opacity: 1;
+      transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+        translate(120px) rotate(var(--rotate-z));
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(calc(var(--rotate-z) * -1)) rotateY(var(--rotate-y))
+        translate(360px) rotate(var(--rotate-z));
+    }
+  }
+}
