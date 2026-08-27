@@ -5,11 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    // Proxy Netlify function calls to the Netlify CLI dev server (port 8888)
-    // Use `npm run dev:netlify` to start the full stack locally
+    // Proxy /api calls to the local dev API server (port 3001)
     proxy: {
-      '/.netlify/functions': {
-        target: 'http://localhost:8888',
+      '/api': {
+        target: 'http://localhost:3001',
         changeOrigin: true,
       },
     },

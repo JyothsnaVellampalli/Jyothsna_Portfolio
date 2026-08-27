@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:netlify": "netlify dev",
+    "dev:api": "node --env-file=.env scripts/dev-server.js",
     "build": "vite build",
     "preview": "vite preview",
     "ingest": "node --env-file=.env scripts/ingest.js"
