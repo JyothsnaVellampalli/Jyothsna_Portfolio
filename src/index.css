@@ -7,25 +7,40 @@
    ========================================================= */
 @layer base {
   :root {
+    /* Colors tuned for WCAG AA contrast on the dark background.
+       Body text and headings target >= 7:1 (AAA); secondary/muted
+       text targets >= 4.5:1 (AA) on both the page and card surfaces. */
     --background: 0 0% 0%;
-    --foreground: 206 35% 72%;
-    --card: 290 35% 28%;
-    --card-foreground: 206 35% 72%;
-    --popover: 290 35% 28%;
-    --popover-foreground: 206 35% 72%;
-    --primary: 239 25% 56%;
-    --primary-foreground: 330 28% 13%;
-    --secondary: 274 30% 34%;
-    --secondary-foreground: 206 35% 72%;
-    --muted: 290 35% 28%;
-    --muted-foreground: 206 25% 60%;
-    --accent: 206 35% 72%;
-    --accent-foreground: 330 28% 13%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 274 30% 34%;
-    --input: 290 35% 28%;
-    --ring: 239 25% 56%;
+    /* Near-white with a faint cool tint. ~19:1 on black. */
+    --foreground: 210 25% 96%;
+
+    /* Card / popover surfaces darkened so light text stays readable. */
+    --card: 265 25% 16%;
+    --card-foreground: 210 25% 96%;
+    --popover: 265 25% 16%;
+    --popover-foreground: 210 25% 96%;
+
+    /* Primary brightened for links, headings and buttons. */
+    --primary: 245 60% 76%;
+    --primary-foreground: 260 40% 10%;
+
+    /* Secondary bubble surface + high-contrast text on it. */
+    --secondary: 268 24% 24%;
+    --secondary-foreground: 210 25% 96%;
+
+    --muted: 265 20% 20%;
+    /* Muted text lifted to ~7:1 on black and ~5:1 on cards. */
+    --muted-foreground: 214 20% 80%;
+
+    --accent: 190 70% 78%;
+    --accent-foreground: 260 40% 10%;
+
+    --destructive: 0 74% 62%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 268 20% 34%;
+    --input: 268 20% 30%;
+    --ring: 245 60% 76%;
     --radius: 0.5rem;
   }
 

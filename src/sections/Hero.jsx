@@ -20,7 +20,7 @@ function Hero() {
             <div className="floating-text-delayed font-mono text-2xl text-primary md:text-3xl">
               Forward deployed engineer (AI x Full-Stack)
             </div>
-            <p className="floating-text mx-auto max-w-3xl text-xl leading-relaxed text-muted-foreground opacity-90">
+            <p className="floating-text mx-auto max-w-3xl text-xl leading-relaxed text-muted-foreground">
               Building AI-powered solutions that solve real client problems.
               4+ years shipping production systems. <b>FDE Academy certified.</b>
             </p>

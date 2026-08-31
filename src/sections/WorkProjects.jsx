@@ -17,7 +17,7 @@ const workProjects = [
     title: 'AI-Based Assessment Tool',
     company: 'Self-employed (Freelance)',
     role: 'Freelance Developer',
-    period: 'June 2025 – September 2025',
+    period: 'June 2025 – Sept 2025',
     description:
       'Built an AI-driven assessment platform prototype, working directly with client requirements to shape the product from concept to delivery.',
     tech: ['React JS', 'Client Collaboration'],
@@ -35,7 +35,7 @@ const workProjects = [
     title: 'SaaS Product Development',
     company: 'Klenty, Chennai',
     role: 'Software Developer',
-    period: '',
+    period: 'June 2022 - Nov 2022',
     description:
       'Contributed to Klenty, a SaaS product, by building in-app notifications and analytics charts. Integrated third-party libraries including Chargebee, working within the Express.js framework.',
     tech: ['Express.js', 'Chargebee', 'Analytics', 'Notifications'],

@@ -1,6 +1,6 @@
 # JYOTHSNA VELLAMPALLI
 
-**Email:** jyotshnavellampalli@gmail.com | **Phone:** +91 9515430520 | **LinkedIn:** [Profile] | **GitHub:** [Profile]
+**Email:** jyotshnavellampalli@gmail.com | **Phone:** +91 9515430520 | **LinkedIn:** linkedin.com/in/jyothsna-vellampalli | **GitHub:** https://github.com/JyothsnaVellampalli
 
 ---
 
@@ -419,11 +419,11 @@ Through 4+ years and experience across multiple industries:
 
 ## REFERENCES & WORK SAMPLES
 
-- **GitHub:** [Link with project code]
+- **GitHub:** https://github.com/JyothsnaVellampalli
 - **Deployed Apps:** 
   - PizzaFlow: https://pizzeria-gamma-five.vercel.app/
-  - SetuHaul Logistics (Admin Dashboard): [Link]
-- **Loom Demo:** https://www.loom.com/share/3305cd1c89de4ae291e0d8f562893b92
+  - SetuHaul Logistics (Admin Dashboard): https://sethaul.vercel.app/
+
 
 ---
 

@@ -16,7 +16,7 @@ const contacts = [
   {
     icon: <Github className="h-6 w-6 text-primary transition-transform group-hover:scale-110" />,
     label: 'github.com/JyothsnaVellampalli',
-    href: 'https://github.com/yothsnaVellampalli',
+    href: 'https://github.com/JyothsnaVellampalli',
   },
 ]
 
