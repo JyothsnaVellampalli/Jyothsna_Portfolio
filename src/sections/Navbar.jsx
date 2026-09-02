@@ -10,7 +10,7 @@ const links = [
 ]
 
 // Replace this with your actual Google Drive shareable link
-const RESUME_URL = 'https://drive.google.com/file/d/1k8Z_GZkcL1lKSFcvxkfcpWZe6zg41eKc/view?usp=sharing'
+const RESUME_URL = 'https://drive.google.com/drive/folders/1qmOgaHaQr-nUmzsuyn4Cj70yGASSn9qo?usp=sharing'
 
 function Navbar() {
   const handleResume = () => {
