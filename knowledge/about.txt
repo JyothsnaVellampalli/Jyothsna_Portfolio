@@ -39,6 +39,7 @@ Currently pursuing Forward Deployed Engineer certification at FDE Academy, combi
 - **LLM Applications:** Prompt engineering, prompt caching, context management, LLM-powered tool integrations
 - **AI Development:** Rapid prototyping with AI-assisted development (vibecoding), constraint-based agent design
 - **Tool Integration:** Multi-tool orchestration, external API integrations with agent workflows
+- **RAG Systems:** Data cleaning, chunking, embeddings, BM25 / semantic / hybrid (RRF, weighted) retrieval, RAGAS-style evaluation
 
 ### Frontend Development
 - **UI Frameworks:** React, responsive design
@@ -312,6 +313,30 @@ Through 4+ years and experience across multiple industries:
 
 ---
 
+### 4. Med RAG — Medical Retrieval-Augmented Generation System
+**Objective:** Build a RAG system over a medical dataset and systematically compare retrieval mechanisms to find what actually works best for medical question answering
+
+**Dataset:** ~64k-passage Hugging Face medical dataset (rag-datasets/rag-mini-bioasq)
+
+**End-to-End Pipeline:**
+- **Data Cleaning:** Cleaned and normalized raw medical passages before indexing
+- **Chunking:** Paragraph-level chunking, held fixed so retrieval methods could be compared fairly
+- **Embedding:** Generated dense vector embeddings with sentence-transformers
+- **Retrieval Methods Compared:**
+  - BM25 keyword / full-text search (Elasticsearch)
+  - Semantic (dense vector) search
+  - Hybrid search with Reciprocal Rank Fusion (RRF)
+  - Weighted-average hybrid search combining keyword and semantic scores
+- **Evaluation:** Measured retrieval and answer quality using RAGAS-style metrics to compare each retrieval strategy objectively
+
+**Technical Stack:** Python, Elasticsearch, sentence-transformers, React, Claude Code
+
+**Skills Applied:** RAG system design, information retrieval (BM25, dense, hybrid/RRF), embeddings, data cleaning, LLM evaluation, experimentation-driven decision making
+
+**GitHub:** https://github.com/JyothsnaVellampalli/Medical-RAG
+
+---
+
 ## KEY DIFFERENTIATORS & FDE READINESS
 
 ### 1. Proven Client-Facing Ability
@@ -401,6 +426,7 @@ Through 4+ years and experience across multiple industries:
 - **Prompt Engineering:** System prompts, constraint-based design, prompt caching
 - **Agentic Systems:** Multi-agent coordination, tool integration, state management
 - **Optimization:** Context management, token efficiency, latency reduction
+- **Retrieval & RAG:** Elasticsearch (BM25), sentence-transformers embeddings, hybrid search with RRF, retrieval evaluation
 
 ---
 
@@ -423,6 +449,7 @@ Through 4+ years and experience across multiple industries:
 - **Deployed Apps:** 
   - PizzaFlow: https://pizzeria-gamma-five.vercel.app/
   - SetuHaul Logistics (Admin Dashboard): https://sethaul.vercel.app/
+  - Med RAG (GitHub): https://github.com/JyothsnaVellampalli/Medical-RAG
 
 
 ---

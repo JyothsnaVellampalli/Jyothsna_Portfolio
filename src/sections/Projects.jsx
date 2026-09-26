@@ -6,6 +6,14 @@ import { Github, ExternalLink } from 'lucide-react'
 
 const projects = [
   {
+    title: 'Med RAG',
+    description: 'A RAG system over a Hugging Face medical dataset(rag-datasets/rag-mini-bioasq) whose purpose is to compare retrieval mechanisms (dense, keyword/FTS, hybrid, grep, ...). Chunking is fixed: paragraph chunking only.',
+    tech: ['claude code', 'React', 'Python', 'Elasticsearch', 'sentence-transformers'],
+    video: 'https://drive.google.com/file/d/1En9wZHWe7yXJRhrG2dkR4m6N-JUhErLN/preview',
+    github: 'https://github.com/JyothsnaVellampalli/Medical-RAG',
+    link: ''
+  },
+  {
     title: 'Set haul',
     description:
       'SetuHaul is an end-to-end freight dock scheduling and driver assistance platform built on AWS Bedrock AgentCore. Drivers report en-route issues through a conversational AI agent; operations staff manage shipments, approve ETA changes, and allocate dock slots through an admin dashboard with AI-powered slot suggestions',
