@@ -3,7 +3,7 @@
  * Local API dev server
  * ============================================================
  *
- * Runs the chat API locally on port 3001 so the chatbot works
+ * Runs the chat API locally on port 3002 so the chatbot works
  * during development without needing Vercel CLI.
  *
  * Usage: npm run dev:api
@@ -15,7 +15,7 @@
 import http from 'node:http'
 import chatHandler from '../api/chat.js'
 
-const PORT = 3001
+const PORT = 3002
 
 const server = http.createServer(async (req, res) => {
   // CORS headers for local dev
@@ -30,6 +30,7 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.url === '/api/chat' && req.method === 'POST') {
+    console.log("received request to /api/chat")
     // Collect body
     let body = ''
     for await (const chunk of req) {
@@ -38,6 +39,7 @@ const server = http.createServer(async (req, res) => {
 
     try {
       req.body = JSON.parse(body)
+      console.log("parsed body: ", req.body)
     } catch {
       req.body = {}
     }

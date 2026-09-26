@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Button from '../ui/Button'
 import Markdown from '../ui/Markdown'
-import { MessageCircle, X, Send, Bot, User, Loader2 } from 'lucide-react'
+import { MessageCircle, X, Send, Bot, User, Loader2, RotateCcw } from 'lucide-react'
 
 const WELCOME_MESSAGE = {
   role: 'bot',
@@ -13,6 +13,10 @@ const SUGGESTIONS = [
   'What are her top skills?',
   'Tell me about her AI projects',
   'What is her current role?',
+  'How much experience does she have?',
+  'What AWS experience does she have?',
+  'Why is she a good fit for an FDE role?',
+  'How can I contact her?',
 ]
 
 function ChatWidget() {
@@ -44,11 +48,16 @@ function ChatWidget() {
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
 
-  const sendQuestion = async (question) => {
+  const sendQuestion = async (question, { isRetry = false } = {}) => {
     const trimmed = question.trim()
     if (!trimmed || loading) return
 
-    setMessages((prev) => [...prev, { role: 'user', content: trimmed }])
+    setMessages((prev) =>
+      isRetry
+        ? // Drop the failed reply; the user's question is already shown
+          prev.slice(0, -1)
+        : [...prev, { role: 'user', content: trimmed }],
+    )
     setInput('')
     setLoading(true)
 
@@ -59,6 +68,13 @@ function ChatWidget() {
         body: JSON.stringify({ question: trimmed }),
       })
       const data = await res.json()
+      if (data.retryable) {
+        setMessages((prev) => [
+          ...prev,
+          { role: 'bot', content: data.error, retryQuestion: trimmed },
+        ])
+        return
+      }
       if (!res.ok) throw new Error(data.error || 'Something went wrong')
       setMessages((prev) => [...prev, { role: 'bot', content: data.answer }])
     } catch (err) {
@@ -77,7 +93,6 @@ function ChatWidget() {
     sendQuestion(input)
   }
 
-  const showSuggestions = messages.length === 1 && !loading
 
   return (
     <>
@@ -155,6 +170,17 @@ function ChatWidget() {
                 }`}
               >
                 {msg.role === 'bot' ? <Markdown text={msg.content} /> : msg.content}
+                {msg.retryQuestion && i === messages.length - 1 && (
+                  <button
+                    type="button"
+                    onClick={() => sendQuestion(msg.retryQuestion, { isRetry: true })}
+                    disabled={loading}
+                    className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary disabled:opacity-50"
+                  >
+                    <RotateCcw className="h-3 w-3" />
+                    Try again
+                  </button>
+                )}
               </div>
               {msg.role === 'user' && (
                 <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
@@ -164,8 +190,8 @@ function ChatWidget() {
             </div>
           ))}
 
-          {/* Suggestion chips (only before first question) */}
-          {showSuggestions && (
+          {/* Suggestion chips (always available below the latest message) */}
+          {!loading && (
             <div className="flex flex-wrap gap-2 pt-1">
               {SUGGESTIONS.map((s) => (
                 <button
