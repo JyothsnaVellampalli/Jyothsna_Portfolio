@@ -71,6 +71,7 @@ Currently pursuing Forward Deployed Engineer certification at FDE Academy, combi
 - Automated infrastructure provisioning using AWS SAM and CodePipeline
 
 **Skills Applied:** AWS Bedrock, Agent Orchestration, Policy Design, Scalable Architecture, DevOps
+**AI Models:** Claude sonnet, Amazon Nova
 
 ---
 
@@ -237,17 +238,17 @@ Through 4+ years and experience across multiple industries:
 **Problem Identified:** Real-time coordination gap in logistics: trucks delayed at customer sites, causing dock disruptions and waiting drivers
 
 **Solution Architected & Built:**
-- AI-powered multi-agent system detecting and responding to transportation exceptions
-- Real-time alerts to drivers and facility managers
+- AI-powered agentic system detecting and responding to transportation exceptions
+- Real-time updates to drivers and facility managers
 - Persistent state management tracking exception lifecycle
 - Admin portal for exception visibility and manual intervention
 
 **Technical Architecture:**
 - **AI Layer:** AWS Bedrock AgentCore Runtime with Strands Agents for multi-agent coordination
 - **Optimization:** Prompt caching and context management reducing latency by 45% in multi-agent workflows
-- **Backend:** FastAPI with PostgreSQL for persistent state and audit trails
+- **Backend:** FastAPI with PostgreSQL(Supabase) for persistent state and audit trails
 - **Frontend:** React dashboard for real-time exception monitoring
-- **Infrastructure:** AWS SAM, CodePipeline for infrastructure automation and rapid deployment
+- **Infrastructure:** Observability with cloud watch, Memory using Agentcore Memory.
 
 **Ownership Demonstrated:**
 - Took problem from discovery through production deployment
@@ -255,8 +256,8 @@ Through 4+ years and experience across multiple industries:
 - Built scalable architecture supporting 1000+ daily alerts
 - Created documentation for post-project handoff
 
-**Skills Applied:** AI/Agentic systems, Multi-agent orchestration, AWS infrastructure, Full-stack development, Problem scoping, Performance optimization
-
+**Skills Applied:** AI/Agentic systems, AWS infrastructure, Full-stack development, Problem scoping, Performance optimization
+**AI Models:** Claude sonnet4-v1
 ---
 
 ### 2. Pizza Shop Ordering & Customer Management System (PizzaFlow)
@@ -265,13 +266,12 @@ Through 4+ years and experience across multiple industries:
 **Solution Delivered (End-to-End):**
 
 **Discovery Phase:**
-- Conducted in-depth client interviews to understand current pain points
 - Mapped complete ordering workflow identifying 8 failure points
 - Scoped realistic MVP with clear success metrics
 
 **MVP Development:**
 - Python command-line ordering system enforcing all business rules
-- Validated input handling, inventory management, pricing logic, GST calculation
+- Validated input handling, inventory management, pricing logic, tax calculation
 - Order persistence for business analytics
 
 **Production Deployment:**
@@ -295,25 +295,14 @@ Through 4+ years and experience across multiple industries:
 **Demonstrated FDE Skills:**
 - Problem → MVP → Production delivery
 - Full ownership and accountability for outcomes
-- Client communication and expectation management
 - End-to-end product thinking (UI, backend, database, AI integration)
 - AI feature scoping and integration
 
----
+**Skills Applied:** LLM Systems, Voice assistant, Full-stack development, Problem scoping, Performance optimization
+**AI Models:** Gemini-2.5-flash, Gemini-3.5-flash
+--- 
 
-### 3. Resume Matcher for Recruiters
-**Objective:** Build practical, usable-first resume matching tool for recruitment workflow
-
-**Approach:**
-- Scoped around real recruiter pain points (time-consuming resume review)
-- Focused on MVP that solves core matching problem
-- Built with rapid iteration and usability in mind
-
-**Outcome:** Functional resume matching application demonstrating ability to translate recruiter workflows into AI-powered solutions
-
----
-
-### 4. Med RAG — Medical Retrieval-Augmented Generation System
+### 3. Med RAG — Medical Retrieval-Augmented Generation System
 **Objective:** Build a RAG system over a medical dataset and systematically compare retrieval mechanisms to find what actually works best for medical question answering
 
 **Dataset:** ~64k-passage Hugging Face medical dataset (rag-datasets/rag-mini-bioasq)
@@ -322,18 +311,20 @@ Through 4+ years and experience across multiple industries:
 - **Data Cleaning:** Cleaned and normalized raw medical passages before indexing
 - **Chunking:** Paragraph-level chunking, held fixed so retrieval methods could be compared fairly
 - **Embedding:** Generated dense vector embeddings with sentence-transformers
-- **Retrieval Methods Compared:**
-  - BM25 keyword / full-text search (Elasticsearch)
+- **Retrieval Methods Compared (all implemented in Elasticsearch):**
+  - BM25 keyword / full-text search
   - Semantic (dense vector) search
   - Hybrid search with Reciprocal Rank Fusion (RRF)
   - Weighted-average hybrid search combining keyword and semantic scores
-- **Evaluation:** Measured retrieval and answer quality using RAGAS-style metrics to compare each retrieval strategy objectively
+- **Reranking:** Reranked retrieved candidates using a Jev model to push the most relevant passages to the top before answer generation
+- **Evaluation:** Measured retrieval and answer quality with RAGAS-style metrics using two approaches, to compare each retrieval strategy objectively:
+  - Cosine similarity checks between embeddings
+  - Jev model-based evaluation
 
 **Technical Stack:** Python, Elasticsearch, sentence-transformers, React, Claude Code
 
-**Skills Applied:** RAG system design, information retrieval (BM25, dense, hybrid/RRF), embeddings, data cleaning, LLM evaluation, experimentation-driven decision making
-
-**GitHub:** https://github.com/JyothsnaVellampalli/Medical-RAG
+**Skills Applied:** RAG system design, information retrieval (BM25, dense, hybrid/RRF), Elasticsearch, reranking with Jev models, embeddings, data cleaning, cosine-similarity and Jev model evaluation, experimentation-driven decision making
+**AI Models:** Typesafe jev-1.13, nomic-embed-text-v1.5, Nvidia nemotron-3-ultra
 
 ---
 

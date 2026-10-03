@@ -7,9 +7,10 @@ import { Github, ExternalLink } from 'lucide-react'
 const projects = [
   {
     title: 'Med RAG',
-    description: 'A RAG system over a Hugging Face medical dataset(rag-datasets/rag-mini-bioasq) whose purpose is to compare retrieval mechanisms (dense, keyword/FTS, hybrid, grep, ...). Chunking is fixed: paragraph chunking only.',
-    tech: ['claude code', 'React', 'Python', 'Elasticsearch', 'sentence-transformers'],
-    video: 'https://drive.google.com/file/d/1En9wZHWe7yXJRhrG2dkR4m6N-JUhErLN/preview',
+    description:
+      'A medical RAG system built on a 64k-passage BioASQ dataset to benchmark retrieval strategies. Compares BM25, semantic, RRF hybrid and weighted hybrid search in Elasticsearch over fixed paragraph chunks, with Jev model reranking and evaluation via cosine similarity and Jev model scoring.',
+    tech: ['claude code', 'Jev', 'React', 'Python', 'Elasticsearch', 'sentence-transformers'],
+    video: 'https://drive.google.com/file/d/1C8yam9m-PaDfQGMmTZw0xnBK1V3wdk_3/preview',
     github: 'https://github.com/JyothsnaVellampalli/Medical-RAG',
     link: ''
   },

@@ -190,8 +190,7 @@ function ChatWidget() {
             </div>
           ))}
 
-          {/* Suggestion chips (always available below the latest message) */}
-          {!loading && (
+          {messages.length === 1 && !loading && (
             <div className="flex flex-wrap gap-2 pt-1">
               {SUGGESTIONS.map((s) => (
                 <button

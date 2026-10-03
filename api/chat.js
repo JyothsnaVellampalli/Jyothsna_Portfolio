@@ -7,11 +7,14 @@
  * 1. Embeds the user's question using Gemini
  * 2. Queries Pinecone for relevant chunks
  * 3. Sends context + question to Gemini for a grounded answer
+ *    (through OpenRouter when OPEN_ROUTER_API_KEY is set, otherwise
+ *    directly through the Gemini API)
  *
  * Required env vars (set in Vercel Dashboard > Settings > Environment Variables):
  *   PINECONE_API_KEY
  *   PINECONE_INDEX_NAME
- *   GEMINI_API_KEY
+ *   GEMINI_API_KEY       - always needed for query embeddings
+ *   OPEN_ROUTER_API_KEY  - optional; when set, answers are generated via OpenRouter
  *
  * ============================================================
  */
@@ -23,9 +26,12 @@ import { findFaqAnswer } from '../knowledge/faq.js'
 const PINECONE_API_KEY = process.env.PINECONE_API_KEY
 const PINECONE_INDEX_NAME = process.env.PINECONE_INDEX_NAME || 'portfolio'
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY
+const OPEN_ROUTER_API_KEY = process.env.OPEN_ROUTER_API_KEY
+const OPEN_ROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions'
 const TOP_K = 5
 
-// Chat models tried in order — later ones are fallbacks for when earlier ones are overloaded
+// Chat models tried in order — later ones are fallbacks for when earlier ones are overloaded.
+// On OpenRouter the same models are addressed as `google/<model>`.
 const CHAT_MODELS = ['gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.5-flash-lite']
 
 // Overloaded / rate-limited / temporary server errors — worth telling the user to retry
@@ -107,7 +113,10 @@ ${question.trim()}
 
 ANSWER:`
 
-    const { answer, model } = await generateWithFallback(genAI, prompt)
+    const generate = OPEN_ROUTER_API_KEY
+      ? (model) => generateWithOpenRouter(model, prompt)
+      : (model) => generateWithGemini(genAI, model, prompt)
+    const { answer, model } = await generateWithFallback(generate)
     console.log(`answer (${model}): `, answer)
     return res.status(200).json({ answer, sources: contextChunks.length })
   } catch (err) {
@@ -128,12 +137,11 @@ ANSWER:`
  * (bad key, bad request) is thrown straight away since other models would
  * fail the same way.
  */
-async function generateWithFallback(genAI, prompt) {
+async function generateWithFallback(generate) {
   let lastErr
   for (const model of CHAT_MODELS) {
     try {
-      const result = await genAI.getGenerativeModel({ model }).generateContent(prompt)
-      return { answer: result.response.text(), model }
+      return { answer: await generate(model), model }
     } catch (err) {
       if (!TRANSIENT_STATUSES.has(err.status) && err.status !== 404) throw err
       console.warn(`Model ${model} unavailable (${err.status}), trying next`)
@@ -141,4 +149,43 @@ async function generateWithFallback(genAI, prompt) {
     }
   }
   throw lastErr
+}
+
+async function generateWithGemini(genAI, model, prompt) {
+  const result = await genAI.getGenerativeModel({ model }).generateContent(prompt)
+  return result.response.text()
+}
+
+/**
+ * Generate via OpenRouter's OpenAI-compatible chat completions API.
+ * Errors carry `status` so generateWithFallback can decide whether to try the next model.
+ */
+async function generateWithOpenRouter(model, prompt) {
+  const response = await fetch(OPEN_ROUTER_URL, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${OPEN_ROUTER_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: `google/${model}`,
+      messages: [{ role: 'user', content: prompt }],
+    }),
+  })
+
+  const data = await response.json().catch(() => ({}))
+  if (!response.ok) {
+    const err = new Error(data.error?.message || `OpenRouter request failed (${response.status})`)
+    err.status = response.status
+    throw err
+  }
+
+  const answer = data.choices?.[0]?.message?.content
+  if (!answer) {
+    // OpenRouter can return 200 with an upstream error in the body
+    const err = new Error(data.error?.message || 'OpenRouter returned no answer')
+    err.status = data.error?.code || 502
+    throw err
+  }
+  return answer
 }
